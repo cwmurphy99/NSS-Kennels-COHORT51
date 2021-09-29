@@ -1,0 +1,53 @@
+{
+    "animals": [
+        { "id": 1, "name": "Max", "breed": "Yellow Lab mix"},
+        { "id": 2, "name": "Sydney", "breed": "Black Lab mix" },
+        { "id": 3, "name": "Eleanor", "breed": "Husky/Boxer mix" }
+    ],
+    "customers": [
+        {
+            "id": 1,
+            "name": "Liam Murphy",
+            "address": "2377 Ferndown Dr"
+        },
+        {
+            "id": 2,
+            "name": "Jackson Murphy",
+            "address": "2377 Ferndown Dr"
+        },
+        {
+            "id": 3,
+            "name": "Amelia Murphy",
+            "address": "2377 Ferndown Dr"
+        }
+    ],
+    "employees": [
+        {
+            "id": 1,
+            "name": "Chris Murphy",
+            "workLocation": "Nashville North"
+        },
+        {
+            "id": 2,
+            "name": "April Murphy",
+            "workLocation": "Nashville North"
+        },
+        {
+            "id": 3,
+            "name": "Lindsay Fuller",
+            "workLocation": "Nashville North"
+        }
+    ],
+    "locations": [
+        {
+            "id": 1,
+            "name": "Nashville North",
+            "address": "8422 Johnson Pike"
+        },
+        {
+            "id": 2,
+            "name": "Nashville South",
+            "address": "209 Emory Drive"
+        }
+    ]
+}
