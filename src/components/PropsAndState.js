@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import "./PropsAndState.css"
 import { WhatIsTheDate } from "../helper/Helper"
+import { QuoteList } from "./quote/QuoteList"
+
 
 export const PropsAndState = ({ yourName, day}) => {
   let [countClicks, setCountClicks] = useState(0)
@@ -31,13 +33,16 @@ export const PropsAndState = ({ yourName, day}) => {
     <>
       <h3>Welcome, {yourName} </h3>
       <WhatIsTheDate />
-      <p className={allColors[colorIndex]}>Holy shit, {countClicks} clicks?</p>
-      <button onClick={(handleClick)}>Click Me</button>
-
-      <div>
+      {/* <p className={allColors[colorIndex]}>Holy shit, {countClicks} clicks?</p> */}
+      
+      <button onClick={(handleClick)}>Show Random Quote</button>
+      <QuoteList />
+      {/* <div>
         <textarea style={{ width: '100%' }} type="text" name="notes" placeholder='notes' onChange={handleChange} />
         <button style={{ width: '100%' }} id="save" disabled={saveNow ? false : true} >Save Note</button>
-      </div>
+      </div> */}
+
+      
     </>
   )
 }
