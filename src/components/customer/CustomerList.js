@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 //LET'S GET THE COMPONENTS WE WILL NEED
 import { CustomerCard } from "./CustomerCard"
-import { getAllCustomers } from "../../modules/CustomerManager"
+import { deleteCustomer, getAllCustomers } from "../../modules/CustomerManager"
 
 export const CustomerList = () => {
-//INITIAL STATE IS AN EMPTY ARRAY
+    //INITIAL STATE IS AN EMPTY ARRAY
     const [customers, setCustomers] = useState([]);
 
     const getCustomers = () => {
@@ -15,15 +15,20 @@ export const CustomerList = () => {
         });
     };
 
-//OBTAINED THE CUSTOMERS FROM THE API ON THE FIRST RENDER
+    const handleDeleteCustomer = id => {
+        deleteCustomer(id)
+            .then(() => getAllCustomers().then(setCustomers));
+    };
+
+    //OBTAINED THE CUSTOMERS FROM THE API ON THE FIRST RENDER
     useEffect(() => {
         getCustomers();
     }, []);
 
-//FINALLY WE USE .map() TO LOOP OVER THE CUSTOMERS ARRAY TO SHOW A LIST OF CUSTOMER CARDS
+    //FINALLY WE USE .map() TO LOOP OVER THE CUSTOMERS ARRAY TO SHOW A LIST OF CUSTOMER CARDS
     return (
         <div className="customer-cards">
-            {customers.map(customer => <CustomerCard key={customer.id} customer={customer} />)}
+            {customers.map(customer => <CustomerCard key={customer.id} customer={customer} handleDeleteCustomer={handleDeleteCustomer} />)}
         </div>
     );
 
