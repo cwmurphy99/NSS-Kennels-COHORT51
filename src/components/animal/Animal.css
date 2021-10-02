@@ -1,12 +1,22 @@
-.animals {
+.animal {
+    margin: auto auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 30px;
+    text-align: left;
+    background-color: #8EBFF4;
   }
   
-  .animal {
-      flex-basis: 28%;
-      margin: 1em;
-      padding: 1em;
-      border: 1px solid goldenrod;
+  .animal__name {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .animal__details {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
   }
