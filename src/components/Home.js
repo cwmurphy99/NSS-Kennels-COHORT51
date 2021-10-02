@@ -1,12 +1,16 @@
 import React from "react";
 import { PropsAndState } from './PropsAndState'
 
+
+const date = new Date();
+let todaysDate = date.toDateString();
+let theTime = date.toLocaleTimeString();
+
+
 export const Home = ({ isAdmin }) => (
     <>
         {isAdmin ?
             <>
-                <p>You are an admin</p>
-
                 <h2>Nashville Kennels</h2>
                 <small>Loving care when you're not there.</small>
 
@@ -14,7 +18,7 @@ export const Home = ({ isAdmin }) => (
                     <div>Visit Us at the Nashville North Location</div>
                     <div>500 Puppy Way</div>
                 </address>
-                <PropsAndState yourName={"Chris"} day={"Tuesday"} />
+                <PropsAndState yourName={"Chris"} day={todaysDate} time={theTime} />
             </>
             : <p>You are not an admin</p>
         }

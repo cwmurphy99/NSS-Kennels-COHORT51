@@ -1,0 +1,73 @@
+/* 
+CSS HEX
+--artichoke: #a2a58eff;
+--windsor-tan: #a15924ff;
+--black-chocolate: #252117ff;
+--aero: #8ebff4ff;
+--black-chocolate-2: #252117ff;
+
+CSS HSL
+--artichoke: hsla(68, 11%, 60%, 1);
+--windsor-tan: hsla(25, 63%, 39%, 1);
+--black-chocolate: hsla(43, 23%, 12%, 1);
+--aero: hsla(211, 82%, 76%, 1);
+--black-chocolate-2: hsla(43, 23%, 12%, 1);
+
+SCSS HEX
+$artichoke: #a2a58eff;
+$windsor-tan: #a15924ff;
+$black-chocolate: #252117ff;
+$aero: #8ebff4ff;
+$black-chocolate-2: #252117ff;
+
+SCSS HSL
+$artichoke: hsla(68, 11%, 60%, 1);
+$windsor-tan: hsla(25, 63%, 39%, 1);
+$black-chocolate: hsla(43, 23%, 12%, 1);
+$aero: hsla(211, 82%, 76%, 1);
+$black-chocolate-2: hsla(43, 23%, 12%, 1);
+
+SCSS RGB
+$artichoke: rgba(162, 165, 142, 1);
+$windsor-tan: rgba(161, 89, 36, 1);
+$black-chocolate: rgba(37, 33, 23, 1);
+$aero: rgba(142, 191, 244, 1);
+$black-chocolate-2: rgba(37, 33, 23, 1);
+
+SCSS Gradient
+$gradient-top: linear-gradient(0deg, #a2a58eff, #a15924ff, #252117ff, #8ebff4ff, #252117ff);
+$gradient-right: linear-gradient(90deg, #a2a58eff, #a15924ff, #252117ff, #8ebff4ff, #252117ff);
+$gradient-bottom: linear-gradient(180deg, #a2a58eff, #a15924ff, #252117ff, #8ebff4ff, #252117ff);
+$gradient-left: linear-gradient(270deg, #a2a58eff, #a15924ff, #252117ff, #8ebff4ff, #252117ff);
+$gradient-top-right: linear-gradient(45deg, #a2a58eff, #a15924ff, #252117ff, #8ebff4ff, #252117ff);
+$gradient-bottom-right: linear-gradient(135deg, #a2a58eff, #a15924ff, #252117ff, #8ebff4ff, #252117ff);
+$gradient-top-left: linear-gradient(225deg, #a2a58eff, #a15924ff, #252117ff, #8ebff4ff, #252117ff);
+$gradient-bottom-left: linear-gradient(315deg, #a2a58eff, #a15924ff, #252117ff, #8ebff4ff, #252117ff);
+$gradient-radial: radial-gradient(#a2a58eff, #a15924ff, #252117ff, #8ebff4ff, #252117ff); 
+
+
+
+
+
+CSV
+a2a58e,a15924,252117,8ebff4,252117
+
+Array
+["a2a58e","a15924","252117","8ebff4","252117"]
+
+Object
+{"Artichoke":"a2a58e","Windsor Tan":"a15924","Black Chocolate":"252117","Aero":"8ebff4","Black Chocolate 2":"252117"}
+
+Extended Array
+[{"name":"Artichoke","hex":"a2a58e","rgb":[162,165,142],"cmyk":[2,0,14,35],"hsb":[68,14,65],"hsl":[68,11,60],"lab":[67,-5,12]},
+{"name":"Windsor Tan","hex":"a15924","rgb":[161,89,36],"cmyk":[0,45,78,37],"hsb":[25,78,63],"hsl":[25,63,39],"lab":[45,25,42]},
+{"name":"Black Chocolate","hex":"252117","rgb":[37,33,23],"cmyk":[0,11,38,85],"hsb":[43,38,15],"hsl":[43,23,12],"lab":[13,0,7]},
+{"name":"Aero","hex":"8ebff4","rgb":[142,191,244],"cmyk":[42,22,0,4],"hsb":[211,42,96],"hsl":[211,82,76],"lab":[76,-3,-31]},
+{"name":"Black Chocolate","hex":"252117","rgb":[37,33,23],"cmyk":[0,11,38,85],"hsb":[43,38,15],"hsl":[43,23,12],"lab":[13,0,7]}]
+
+
+
+
+
+
+*/
