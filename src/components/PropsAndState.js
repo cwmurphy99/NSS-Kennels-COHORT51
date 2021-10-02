@@ -6,7 +6,7 @@ import { QuoteList } from "./quote/QuoteList"
 
 export const PropsAndState = ({ yourName, day}) => {
   let [countClicks, setCountClicks] = useState(0)
-  let [saveNow, setSaveNow] = useState(false)
+  //let [saveNow, setSaveNow] = useState(false)
   let [colorIndex, setColorIndex] = useState(0)
 
   const allColors = ['red', 'blue', 'orange'];
@@ -23,11 +23,11 @@ export const PropsAndState = ({ yourName, day}) => {
     setColorIndex(newColorIndex);
   }
 
-  const handleChange = (event) => {
-    let newSaveNow = saveNow;
-    newSaveNow = true;
-    setSaveNow(newSaveNow);
-  }
+  // const handleChange = (event) => {
+  //   let newSaveNow = saveNow;
+  //   newSaveNow = true;
+  //   setSaveNow(newSaveNow);
+  // }
 
   return (
     <>

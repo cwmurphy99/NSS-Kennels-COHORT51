@@ -1,24 +1,48 @@
 {
     "animals": [
-        { "id": 1, "name": "Max", "breed": "Yellow Lab mix"},
-        { "id": 2, "name": "Sydney", "breed": "Black Lab mix" },
-        { "id": 3, "name": "Eleanor", "breed": "Husky/Boxer mix" }
+        { 
+            "id": 1, 
+            "name": "Max", 
+            "breed": "Yellow Lab mix",
+            "locationId": 1,
+            "customerId": 1
+        },
+        { 
+            "id": 2, 
+            "name": "Sydney", 
+            "breed": "Black Lab mix",
+            "locationId": 1,
+            "customerId": 1
+        },
+        { 
+            "id": 3, 
+            "name": "Eleanor", 
+            "breed": "Husky/Boxer mix",
+            "locationId": 1,
+            "customerId": 1
+        }
     ],
     "customers": [
         {
             "id": 1,
             "name": "Liam Murphy",
-            "address": "2377 Ferndown Dr"
+            "address": "2377 Ferndown Dr",
+            "locationId": 1,
+            "customerId": 1
         },
         {
             "id": 2,
             "name": "Jackson Murphy",
-            "address": "2377 Ferndown Dr"
+            "address": "2377 Ferndown Dr",
+            "locationId": 1,
+            "customerId": 1
         },
         {
             "id": 3,
             "name": "Amelia Murphy",
-            "address": "2377 Ferndown Dr"
+            "address": "2377 Ferndown Dr",
+            "locationId": 1,
+            "customerId": 1
         }
     ],
     "employees": [
