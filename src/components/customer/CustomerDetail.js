@@ -12,12 +12,12 @@ export const CustomerDetail = () => {
   const handleDelete = () => {
     setIsLoading(true);
     deleteCustomer(customerId).then(() =>
-      history.push("/customer")
+      history.push("/customers")
     );
   };
 
   const handleBack = () => {
-    history.push("/customer");
+    history.push("/customers");
   }
 
   useEffect(() => {
@@ -28,23 +28,25 @@ export const CustomerDetail = () => {
         setCustomer({
           name: customer.name,
           address: customer.address,
-          location: customer.location.name,
+          location: customer.location.name
         });
       });
   }, [customerId]);
 
   return (
+
     <section className="customer">
-      <h3 className="customer__name">{customer.name}</h3>
-      <div className="customer__address">{customer.address}</div>
-      {/* What's up with the question mark???? See below.*/}
-      <div className="customer__location">Location: {customer.location?.name}</div>
-      <button type="button" disabled={isLoading} onClick={handleDelete}>
-        Discharge
-      </button>
-      <button type="button" onClick={handleBack}>
-        Go Back
-      </button>
+    
+      <h3 className="customer__name"> {customer.name} </h3>
+    
+      <div className="customer__address"> {customer.address} </div>
+    
+      <div className="customer__location"> Location: {customer.location} </div>
+    
+      <button type="button" disabled={isLoading} onClick={handleDelete}> Discharge </button>
+    
+      <button type="button" onClick={handleBack}> Go Back </button>
+    
     </section>
   );
 }

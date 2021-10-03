@@ -5,14 +5,14 @@
             "name": "Max", 
             "breed": "Yellow Lab mix",
             "locationId": 1,
-            "customerId": 1
+            "customerId": 3
         },
         { 
             "id": 2, 
             "name": "Sydney", 
             "breed": "Black Lab mix",
             "locationId": 1,
-            "customerId": 1
+            "customerId": 2
         },
         { 
             "id": 3, 
@@ -20,6 +20,13 @@
             "breed": "Husky/Boxer mix",
             "locationId": 1,
             "customerId": 1
+        },
+        {
+            "id": 4,
+            "name": "Bruce",
+            "breed": "Carolina Dog",
+            "locationId": 2,
+            "customerId": 4
         }
     ],
     "customers": [
@@ -35,14 +42,21 @@
             "name": "Jackson Murphy",
             "address": "2377 Ferndown Dr",
             "locationId": 1,
-            "customerId": 1
+            "customerId": 2
         },
         {
             "id": 3,
             "name": "Amelia Murphy",
             "address": "2377 Ferndown Dr",
             "locationId": 1,
-            "customerId": 1
+            "customerId": 3
+        },
+        {
+            "id": 4,
+            "name": "Aaron Gertler",
+            "address": "701 Skyview Dr",
+            "locationId": 2,
+            "customerId": 4
         }
     ],
     "employees": [
@@ -70,7 +84,7 @@
         },
         {
             "id": 2,
-            "name": "Nashville South",
+            "name": "East Nashville",
             "address": "209 Emory Drive"
         }
     ]
