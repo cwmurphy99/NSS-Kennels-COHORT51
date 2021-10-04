@@ -6,7 +6,7 @@ export const getEmployeeById = (employeeId) => {
 }
 
 export const getAllEmployees = () => {
-    return fetch(`${remoteURL}/employees`)
+    return fetch(`${remoteURL}/employees?_expand=location`)
     .then(res => res.json())
 }
 
@@ -14,4 +14,14 @@ export const deleteEmployee = (id) => {
     return fetch(`${remoteURL}/employees/${id}`, {
         method: "DELETE"
     }).then(result => result.json())
+}
+
+export const addEmployee = (newEmployee) => {
+    return fetch(`${remoteURL}/employees`, {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify(newEmployee)
+    }).then(response => response.json())
 }

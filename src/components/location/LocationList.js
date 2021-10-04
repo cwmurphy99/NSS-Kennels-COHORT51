@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 //IMPORT ALL OF THE COMPONENTS THAT WE WILL NEED
 import { LocationCard } from './LocationCard';
 import { deleteLocation, getAllLocations } from '../../modules/LocationManager';
+import { useHistory } from 'react-router-dom';
 
 export const LocationList = () => {
     //STATE IS INITIALLY SET AS AN EMPTY ARRAY
@@ -14,6 +15,7 @@ export const LocationList = () => {
         });
     };
 
+    const history = useHistory();
     const handleDeleteLocation = id => {
         deleteLocation(id)
             .then(() => getAllLocations().then(setLocations));
@@ -26,8 +28,17 @@ export const LocationList = () => {
 
     //USE .map() TO LOOP OVER THE LOCATIONS ARRAY TO SHOW A LIST OF LOCATION CARDS
     return (
-        <div className="location-cards">
-            {locations.map(location => <LocationCard key={location.id} location={location} handleDeleteLocation={handleDeleteLocation} />)}
-        </div>
+        <>
+            <section className="section-content">
+                <button type="button"
+                    className="btn"
+                    onClick={() => { history.push("/locations/create") }}>
+                    New Location
+                </button>
+            </section>
+            <div className="location-cards">
+                {locations.map(location => <LocationCard key={location.id} location={location} handleDeleteLocation={handleDeleteLocation} />)}
+            </div>
+        </>
     );
 };

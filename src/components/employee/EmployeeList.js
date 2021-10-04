@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 //IMPORT COMPONENTS
 import { EmployeeCard } from './EmployeeCard';
 import { deleteEmployee, getAllEmployees } from '../../modules/EmployeeManager'
+import { useHistory } from 'react-router-dom';
 
 export const EmployeeList = () => {
     //THE INITIAL STATE IS AN EMPTY ARRAY
@@ -14,6 +15,8 @@ export const EmployeeList = () => {
         });
     };
 
+    const history = useHistory();
+
     const handleDeleteEmployee = id => {
         deleteEmployee(id)
             .then(() => getAllEmployees().then(setEmployees));
@@ -24,10 +27,21 @@ export const EmployeeList = () => {
         getEmployees();
     }, []);
 
+    console.log(employees);
+
     //USE THE .map() FUNCTION TO LOOP OVER THE EMPLOYEES ARRAY TO SHOW A LIST OF EMPLOYEE CARDS
     return (
-        <div className="employee-cards">
-            {employees.map(employee => <EmployeeCard key={employee.id} employee={employee} handleDeleteEmployee={handleDeleteEmployee} />)}
-        </div>
+        <>
+            <section className="section-content">
+                <button type="button"
+                    className="btn"
+                    onClick={() => { history.push("/employees/create") }}>
+                    New Employee
+                </button>
+            </section>
+            <div className="employee-cards">
+                {employees.map(employee => <EmployeeCard key={employee.id} employee={employee} handleDeleteEmployee={handleDeleteEmployee} />)}
+            </div>
+        </>
     );
 };

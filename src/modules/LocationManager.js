@@ -15,3 +15,14 @@ export const deleteLocation = (id) => {
         method: "DELETE"
     }).then(result => result.json())
 }
+
+//USED FOR THE FORM TO CREATE A NEW LOCATION IN THE DATABASE
+export const addLocation = (newLocation) => {
+    return fetch(`${remoteURL}/locations`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newLocation)
+    }).then(response => response.json())
+}

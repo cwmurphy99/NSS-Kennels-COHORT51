@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 //LET'S GET THE COMPONENTS WE WILL NEED
-import { CustomerCard } from "./CustomerCard"
-import { deleteCustomer, getAllCustomers } from "../../modules/CustomerManager"
+import { CustomerCard } from "./CustomerCard";
+import { deleteCustomer, getAllCustomers } from "../../modules/CustomerManager";
+import { useHistory } from 'react-router-dom';
 
 export const CustomerList = () => {
     //INITIAL STATE IS AN EMPTY ARRAY
@@ -15,6 +16,8 @@ export const CustomerList = () => {
         });
     };
 
+    const history = useHistory();
+
     const handleDeleteCustomer = id => {
         deleteCustomer(id)
             .then(() => getAllCustomers().then(setCustomers));
@@ -27,9 +30,18 @@ export const CustomerList = () => {
 
     //FINALLY WE USE .map() TO LOOP OVER THE CUSTOMERS ARRAY TO SHOW A LIST OF CUSTOMER CARDS
     return (
-        <div className="customer-cards">
-            {customers.map(customer => <CustomerCard key={customer.id} customer={customer} handleDeleteCustomer={handleDeleteCustomer} />)}
-        </div>
+        <>
+            <section className="section-content">
+                <button type="button"
+                    className="btn"
+                    onClick={() => { history.push("/customers/create") }}>
+                    New Customer
+                </button>
+            </section>
+            <div className="customer-cards">
+                {customers.map(customer => <CustomerCard key={customer.id} customer={customer} handleDeleteCustomer={handleDeleteCustomer} />)}
+            </div>
+        </>
     );
 
 };
