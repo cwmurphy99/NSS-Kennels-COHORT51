@@ -29,6 +29,7 @@ export const LocationDetail = () => {
                     animal: location.animal.name,
                     owner: location.customer.name
                 });
+                setIsLoading(false);
             });
     }, [locationId]);
 

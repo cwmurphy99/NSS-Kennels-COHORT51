@@ -33,6 +33,7 @@ export const AnimalDetail = () => {
                     location: animal.location.name,
                     image: animal.image
                 });
+                setIsLoading(false);
             });
     }, [animalId]);
 

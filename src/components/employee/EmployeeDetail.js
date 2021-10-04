@@ -3,7 +3,7 @@ import { deleteEmployee, getEmployeeById } from "../../modules/EmployeeManager";
 import { useParams, useHistory } from "react-router-dom";
 
 export const EmployeeDetail = () => {
-    const [employee, setEmployee] = useState({ name: "", location: ""});
+    const [employee, setEmployee] = useState({ name: "", location: "", locationId: ""});
     const [isLoading, setIsLoading] = useState(true);
     const {employeeId} = useParams();
     const history = useHistory();
@@ -24,11 +24,10 @@ export const EmployeeDetail = () => {
         .then(employee => {
             setEmployee({
                 name: employee.name,
-                location: employee.location
+                location: employee.location.name
             });
         });
     }, [employeeId]);
-
     return (
         <section className="employee">
             <h3 className="employee__name">{employee.name}</h3>

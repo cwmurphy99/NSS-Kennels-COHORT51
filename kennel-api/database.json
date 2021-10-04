@@ -1,91 +1,117 @@
 {
-    "animals": [
-        { 
-            "id": 1, 
-            "name": "Max", 
-            "breed": "Yellow Lab mix",
-            "locationId": 1,
-            "customerId": 3
-        },
-        { 
-            "id": 2, 
-            "name": "Sydney", 
-            "breed": "Black Lab mix",
-            "locationId": 1,
-            "customerId": 2
-        },
-        { 
-            "id": 3, 
-            "name": "Eleanor", 
-            "breed": "Husky/Boxer mix",
-            "locationId": 1,
-            "customerId": 1
-        },
-        {
-            "id": 4,
-            "name": "Bruce",
-            "breed": "Carolina Dog",
-            "locationId": 2,
-            "customerId": 4
-        }
-    ],
-    "customers": [
-        {
-            "id": 1,
-            "name": "Liam Murphy",
-            "address": "2377 Ferndown Dr",
-            "locationId": 1,
-            "customerId": 1
-        },
-        {
-            "id": 2,
-            "name": "Jackson Murphy",
-            "address": "2377 Ferndown Dr",
-            "locationId": 1,
-            "customerId": 2
-        },
-        {
-            "id": 3,
-            "name": "Amelia Murphy",
-            "address": "2377 Ferndown Dr",
-            "locationId": 1,
-            "customerId": 3
-        },
-        {
-            "id": 4,
-            "name": "Aaron Gertler",
-            "address": "701 Skyview Dr",
-            "locationId": 2,
-            "customerId": 4
-        }
-    ],
-    "employees": [
-        {
-            "id": 1,
-            "name": "Chris Murphy",
-            "workLocation": "Nashville North"
-        },
-        {
-            "id": 2,
-            "name": "April Murphy",
-            "workLocation": "Nashville North"
-        },
-        {
-            "id": 3,
-            "name": "Lindsay Fuller",
-            "workLocation": "Nashville North"
-        }
-    ],
-    "locations": [
-        {
-            "id": 1,
-            "name": "Nashville North",
-            "address": "8422 Johnson Pike"
-        },
-        {
-            "id": 2,
-            "name": "East Nashville",
-            "address": "209 Emory Drive"
-        }
-    ]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Max",
+      "breed": "Yellow Lab mix"
+    },
+    {
+      "id": 2,
+      "name": "Sydney",
+      "breed": "Black Lab mix"
+    },
+    {
+      "id": 3,
+      "name": "Eleanor",
+      "breed": "Husky/Boxer mix",
+      "locationId": 1,
+      "customerId": 1
+    },
+    {
+      "id": 4,
+      "name": "Bruce",
+      "breed": "Carolina Dog",
+      "locationId": 2,
+      "customerId": 4
+    },
+    {
+      "name": "Rio",
+      "breed": "Gordon Setter",
+      "locationId": 1,
+      "customerId": 3,
+      "id": 5
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Liam Murphy",
+      "address": "2377 Ferndown Dr",
+      "locationId": 1,
+      "customerId": 1,
+      "email": "liam@me.com",
+      "isAdmin": true
+    },
+    {
+      "id": 2,
+      "name": "Jackson Murphy",
+      "address": "2377 Ferndown Dr",
+      "locationId": 1,
+      "customerId": 2,
+      "email": "jack@me.com"
+    },
+    {
+      "id": 3,
+      "name": "Amelia Murphy",
+      "address": "2377 Ferndown Dr",
+      "locationId": 1,
+      "customerId": 3,
+      "email": "amelia@me.com"
+    },
+    {
+      "id": 4,
+      "name": "Aaron Gertler",
+      "address": "701 Skyview Dr",
+      "locationId": 2,
+      "customerId": 4,
+      "email": "aaron@me.com"
+    },
+    {
+      "name": "John Doe",
+      "address": "124 main st",
+      "locationId": 1,
+      "customerId": 5,
+      "id": 5,
+      "email": "john@me.com"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Chris Murphy",
+      "locationId": 1
+    },
+    {
+      "id": 2,
+      "name": "April Murphy",
+      "locationId": 1
+    },
+    {
+      "id": 3,
+      "name": "Lindsay Fuller",
+      "locationId": 1
+    },
+    {
+      "name": "Stacey Gerdling",
+      "locationId": 3,
+      "id": 4
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Nashville North",
+      "address": "8422 Johnson Pike"
+    },
+    {
+      "id": 2,
+      "name": "East Nashville",
+      "address": "209 Emory Drive"
+    },
+    {
+      "name": "Cincinnati North",
+      "address": "123 main st",
+      "id": 3
+    }
+  ]
 }
