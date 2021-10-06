@@ -2,6 +2,15 @@ import React, { useState } from "react"
 import "./PropsAndState.css"
 import { QuoteList } from "./quote/QuoteList"
 
+const GetUser = () => {
+  let user = sessionStorage.getItem("name");
+  console.log(user);
+}
+
+GetUser();
+
+
+
 export const PropsAndState = ({ yourName, day}) => {
   let [countClicks, setCountClicks] = useState(0)
  

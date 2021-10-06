@@ -23,14 +23,7 @@ import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
 
 
-export const ApplicationViews = ({ isAdmin }) => {
-
-  const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("kennel_customer") !== null)
-
-  const setAuthUser = (user) => {
-    sessionStorage.setItem("kennel_customer", JSON.stringify(user))
-    setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null)
-  }
+export const ApplicationViews = ( {isAdmin, isAuthenticated, setAuthUser}) => {
 
   return (
     <>
@@ -57,15 +50,13 @@ export const ApplicationViews = ({ isAdmin }) => {
         <AnimalForm />
       </Route>
 
-      <Route path="/login">
+      <Route exact path="/login">
         <Login setAuthUser={setAuthUser} />
       </Route>
 
       <Route path="/register">
         <Register setAuthUser={setAuthUser} />
       </Route>
-
-      
 
       {/* Render the location list when http://localhost:3000/locations */}
       <Route exact path="/locations">

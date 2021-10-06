@@ -23,6 +23,7 @@ export const Login = ({setAuthUser}) => {
                 if (exists) {
                     setAuthUser(exists)
                     history.push("/")
+                    //window.location.reload()
                 } else {
                     existDialog.current.showModal()
                 }
